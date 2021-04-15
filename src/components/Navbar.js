@@ -37,6 +37,7 @@ const Navbar = () => {
                   <a href={url}>{text}</a>
                   
                 </li>
+              
               );
             })}
           </ul>

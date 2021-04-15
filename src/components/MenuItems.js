@@ -1,5 +1,5 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCartPlus } from '@fortawesome/free-solid-svg-icons'
+import CartWidget from "./CartWidget";
+
 
 export const links = [
   {
@@ -27,9 +27,10 @@ export const links = [
     url: '#',
     text: 'Gifts',
   },
-   {
+    {
     id: 6,
     url: '#',
-    text: <FontAwesomeIcon icon={faCartPlus} />,
+    text: <CartWidget/>,
   },
+ 
 ];
