@@ -163,6 +163,16 @@ nav {
   height: 100px;
   width: 100px;
 }
+.audio-link {
+  margin: 0 auto;
+  background: transparent;
+  color: #fff;
+}
+audio::-webkit-media-controls-panel {
+  border-radius: 5px;
+  display: flex;
+  background: transparent;
+}
 .links a {
   color: var(--clr-grey-3);
   font-size: 1rem;

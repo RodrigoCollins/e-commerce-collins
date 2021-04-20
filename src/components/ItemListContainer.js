@@ -1,4 +1,5 @@
 import React from 'react'
+import Audio from './Audio'
 
 
 
@@ -9,6 +10,7 @@ const ItemListContainer = (props) => {
         <div className='banner'>
            
             <h1>{props.greeting}</h1>
+            <Audio/>
             
         </div>
     )
@@ -17,4 +19,3 @@ const ItemListContainer = (props) => {
 export default ItemListContainer
 
 
-//style={{ backgroundImage: `url(${bgimg})`, backgroundSize: 'auto'}}
