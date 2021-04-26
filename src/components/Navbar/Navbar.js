@@ -3,11 +3,14 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
 import { links } from './MenuItems';
 import logo from './logo.png';
+import './Navbar.css'
+
 
 const Navbar = () => {
   const [showLinks, setShowLinks] = useState(false);
   const linksContainerRef = useRef(null);
   const linksRef = useRef(null);
+ 
   const toggleLinks = () => {
     setShowLinks(!showLinks);
   };
@@ -19,8 +22,10 @@ const Navbar = () => {
       linksContainerRef.current.style.height = '0px';
     }
   }, [showLinks]);
+
+
   return (
-    <nav>
+    <nav >
       <div className='nav-center'>
         <div className='nav-header'>
           <img src={logo} className='logo' alt='logo' />

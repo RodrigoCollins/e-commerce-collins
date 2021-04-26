@@ -1,9 +1,10 @@
 import React from 'react'
 import Audio from './Audio'
+import './Banner.css'
 
 
 
-const ItemListContainer = (props) => {
+const Banner = (props) => {
 
     return (
         
@@ -16,6 +17,6 @@ const ItemListContainer = (props) => {
     )
 }
 
-export default ItemListContainer
+export default Banner
 
 
