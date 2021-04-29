@@ -7,10 +7,10 @@ export const Items = (props) => {
       <article key={props.id} className='menu-item'> 
        <img src={props.img} alt={props.desc} className='photo'/>
        <div className='item-info'>
-       <header>
+       <div>
        <p className='item-text'>{props.desc}</p>
        <h4 className="price">{props.price}</h4>
-       </header>
+       </div>
        </div>
       </article>
     </div>

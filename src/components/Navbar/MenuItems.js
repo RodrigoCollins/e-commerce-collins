@@ -1,37 +1,26 @@
-import CartWidget from "./CartWidget";
-
+import CartWidget from "./CartWidget"
 
 
 export const links = [
   {
     id: 1,
-    url: '#',
-    text: 'Home',
+    url: '/About',
+    text: 'About',
   },
   {
     id: 2,
-    url: '#',
-    text: 'Men',
+    url: '/Shop',
+    text: 'Shop',
   },
   {
     id: 3,
-    url: '#',
-    text: 'Women',
+    url: '/Faq',
+    text: 'FAQ',
   },
   {
     id: 4,
-    url: '#',
-    text: 'Kids',
-  },
-  {
-    id: 5,
-    url: '#',
-    text: 'Gifts',
-  },
-    {
-    id: 6,
-    url: '#',
+    url: '/Cart',
     text: <CartWidget/>,
   },
- 
+
 ];

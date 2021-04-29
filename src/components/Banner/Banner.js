@@ -4,7 +4,7 @@ import './Banner.css'
 
 
 
-const Banner = (props) => {
+export const Banner = (props) => {
 
     return (
         

@@ -35,5 +35,17 @@ export const products = [
     desc: 'John Cena Deluxe Halloween Youth Costume 2019',
     price:'$32.99',
   },
+       {
+    id: 7,
+    img: 'https://cdn.shopify.com/s/files/1/0070/5698/2143/products/JOHNCENASERIES119FIGURE_2_1000x1000_crop_center.jpg?v=1618333543',
+    desc: 'John Cena Series 119 Mattel Action Figure',
+    price:'$14.99',
+  },
+  {
+    id: 8,
+    img: 'https://cdn.shopify.com/s/files/1/0070/5698/2143/products/0105DC4599_1000x1000_crop_center.jpg?v=1617713873',
+    desc: 'WrestleMania 29 "Greatness vs Redemption" 24x36 Art Poster',
+    price:'$39.99',
+  },
 
 ]

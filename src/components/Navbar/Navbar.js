@@ -4,9 +4,11 @@ import { faBars } from '@fortawesome/free-solid-svg-icons'
 import { links } from './MenuItems';
 import logo from './logo.png';
 import './Navbar.css'
+import { Link } from 'react-router-dom'
 
 
-const Navbar = () => {
+
+export const Navbar = () => {
   const [showLinks, setShowLinks] = useState(false);
   const linksContainerRef = useRef(null);
   const linksRef = useRef(null);
@@ -25,7 +27,7 @@ const Navbar = () => {
 
 
   return (
-    <nav >
+    <nav>
       <div className='nav-center'>
         <div className='nav-header'>
           <img src={logo} className='logo' alt='logo' />
@@ -39,7 +41,8 @@ const Navbar = () => {
               const { id, url, text } = link;
               return (
                 <li key={id}>
-                  <a href={url}>{text}</a>
+                  <Link exact to={url}>{text}</Link>
+                  
                   
                 </li>
               
