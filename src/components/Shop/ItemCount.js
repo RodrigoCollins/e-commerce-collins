@@ -2,12 +2,11 @@ import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCartPlus } from '@fortawesome/free-solid-svg-icons'
 import './ItemCount.css'
-import { products } from './ItemsData';
 
 
 const ItemCount = (props) => {
   const [value, setValue] = useState(1);
-  const [stock, setStock] = useState(products.stock - 1);
+  const [stock, setStock] = useState(props.stock - 1);
 
  const onAdd = () => {
    if(value < stock || value < props.stock){
