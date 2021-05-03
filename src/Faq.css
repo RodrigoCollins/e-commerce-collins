@@ -80,12 +80,6 @@ ul {
 a {
   text-decoration: none;
 }
-img:not(.logo) {
-  width: 100%;
-}
-img {
-  display: block;
-}
 
 h1,
 h2,
@@ -113,7 +107,7 @@ p {
   margin-bottom: 1.25rem;
   color: var(--clr-grey-5);
 }
-@media screen and (min-width: 800px) {
+@media screen {
   h1 {
     font-size: 4rem;
   }
@@ -162,20 +156,9 @@ p {
 }
 
 .section-center {
-  width: 90vw;
   margin: 0 auto;
-  max-width: 1170px;
 }
-@media screen and (min-width: 992px) {
-  .section-center {
-    width: 95vw;
-  }
-}
-main {
-  min-height: 100vh;
-  display: grid;
-  place-items: center;
-}
+
 /*
 =============== 
 Questions

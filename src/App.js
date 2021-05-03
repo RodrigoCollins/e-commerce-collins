@@ -1,10 +1,11 @@
 import './App.css'
-import {ItemListContainer} from './components/Shop/ItemListContainer'
+import ItemList from './components/Shop/ItemList'
 import {Navbar} from './components/Navbar/Navbar'
 import {Banner} from './components/Banner/Banner'
 import {About} from './About'
 import {Faq} from './Faq'
-import { BrowserRouter, Switch, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import ItemDetailContainer from './components/Shop/ItemDetailContainer'
 
 
 
@@ -12,27 +13,32 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom'
 
 function App() {
   return (
-    <BrowserRouter>
+   
     <div className="App">
-    
-        <Switch>
-              <Navbar/>
-          <Route exact path='/'>
-              <Banner greeting='Welcome to Cenation'/>
-          </Route>
-          <Route path='/About'>
-              <About/>
-          </Route>
-          <Route path='/Shop'>
-              <ItemListContainer/>
-          </Route>
-          <Route path='/Faq'>
-              <Faq/>
-          </Route>
-        </Switch>
+    <Router>
+      
+      <Navbar/>
+            <Switch> 
+               <Route path="/about">
+                    <Banner greeting='Welcome to Cenation'/>
+                    <About/>
+                </Route> 
+                <Route exact path="/">
+                    <Banner greeting='Welcome to Cenation'/> 
+                    <ItemList/>
+                </Route>
+                <Route path="/faq">    
+                    <Faq/>
+                </Route>
+                <Route path="/itemdetail/:id" children={<ItemDetailContainer/>}/>
+                 
+            </Switch> 
+    </Router>
+         
+       
     
     </div>
-    </BrowserRouter>
+  
   );
 }
 

@@ -4,22 +4,22 @@ import CartWidget from "./CartWidget"
 export const links = [
   {
     id: 1,
-    url: '/About',
+   path: '/about',
     text: 'About',
   },
   {
     id: 2,
-    url: '/Shop',
+    path: '/itemListContainer',
     text: 'Shop',
   },
   {
     id: 3,
-    url: '/Faq',
+    path: '/faq',
     text: 'FAQ',
   },
   {
     id: 4,
-    url: '/Cart',
+    path: '/cart' ,
     text: <CartWidget/>,
   },
 

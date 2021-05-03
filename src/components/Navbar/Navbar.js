@@ -1,10 +1,12 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
-import { links } from './MenuItems';
 import logo from './logo.png';
 import './Navbar.css'
-import { Link } from 'react-router-dom'
+import {Link} from 'react-router-dom'
+import CartWidget from "./CartWidget"
+
+
 
 
 
@@ -37,17 +39,22 @@ export const Navbar = () => {
         </div>
         <div className='links-container' ref={linksContainerRef}>
           <ul className='links' ref={linksRef}>
-            {links.map((link) => {
-              const { id, url, text } = link;
-              return (
-                <li key={id}>
-                  <Link exact to={url}>{text}</Link>
-                  
-                  
+          
+                <li>
+                 <Link to='/about'>About</Link>
                 </li>
+                <li>
+                 <Link to='/'>Shop</Link>
+                </li>
+                <li>
+                 <Link to='/faq'>FAQ</Link>
+                </li>
+                <li>
+                 <Link to='/cart'><CartWidget/></Link>
+                </li>
+
               
-              );
-            })}
+            
            
           </ul>
         

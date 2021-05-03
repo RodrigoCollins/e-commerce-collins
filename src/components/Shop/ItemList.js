@@ -2,31 +2,29 @@ import React, { useState } from 'react';
 import {products} from './ItemsData'
 import {Items} from './Items'
 import './ItemList.css'
+import {Link} from 'react-router-dom'
 
 const ItemList = () => {
-    const [items, setItems] = useState([''])
-  
-    const handleClick = async (items) => {
-        console.log(products)
-        setTimeout (() => {
-            setItems(products)
+    const [items, setItems] = useState(products)
 
-        },2000)
+   
 
-    }
+    
     
     return (
         <>
-            <button className='btn-shop' onClick={handleClick}>Shop</button>
             <div className='shoplist'>
             {items.length > 0 && items.map((product) => {
-              const {id, img, desc, price} = product;
+              const {id, img, desc, price, stock} = product;
               return (
-              <Items id={id} img={img} desc={desc} price={price}/>
+              <Link to={`/itemdetail/${product.id}`}>
+                <Items key={id} img={img} desc={desc} price={price} stock={stock}/>
+              </Link>
+              
               )})}
           </div>    
         </>
-    )
-}
+    )}
+
 
 export default ItemList
