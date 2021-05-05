@@ -6,9 +6,7 @@ import {About} from './About'
 import {Faq} from './Faq'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import ItemDetailContainer from './components/Shop/ItemDetailContainer'
-
-
-
+import Cart from './Cart'
 
 
 function App() {
@@ -20,7 +18,6 @@ function App() {
       <Navbar/>
             <Switch> 
                <Route path="/about">
-                    <Banner greeting='Welcome to Cenation'/>
                     <About/>
                 </Route> 
                 <Route exact path="/">
@@ -31,7 +28,10 @@ function App() {
                     <Faq/>
                 </Route>
                 <Route path="/itemdetail/:id" children={<ItemDetailContainer/>}/>
-                 
+                <Route  path="/cart">
+                  <Cart/>
+                </Route> 
+              
             </Switch> 
     </Router>
          

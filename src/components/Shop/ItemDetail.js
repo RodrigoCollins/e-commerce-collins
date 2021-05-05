@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import {products} from './ItemsData'
-import {useParams} from 'react-router-dom'
+import {Link, useParams} from 'react-router-dom'
 import Items from './Items'
 import ItemCount from './ItemCount'
 
@@ -12,13 +12,14 @@ const ItemDetail = () => {
     useEffect(() =>{
     const newItem = products.find((item)=>item.id === parseInt(id));
     setItem(newItem)
-    },[])
+    },[id])
     console.log(item)
 
     return (
     <div className='detail-container' >
         <Items key={id} img={item.img} desc={item.desc} price={item.price}/>
         <ItemCount stock={item.stock}/>
+        <Link to="/" className="btn">Back to Shop</Link>
     </div>
     )
 }

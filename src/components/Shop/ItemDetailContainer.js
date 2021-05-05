@@ -1,5 +1,4 @@
 import React from 'react';
-import ItemCount from './ItemCount';
 import ItemDetail from './ItemDetail';
 import './ItemDetailContainer.css'
 

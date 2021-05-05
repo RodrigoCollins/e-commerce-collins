@@ -3,6 +3,7 @@ import React from 'react'
 export const About = () => {
     return (
         <div>
+            <img src="https://www.dosdossolodos.com/wp-content/uploads/2021/02/john-cena-1000x600.png" className="about-pic"/>
             <p>
                 John Felix Anthony Cena, Jr. (West Newbury, Massachusetts; 23 de abril de 1977) es un exculturista, actor, rapero y luchador profesional estadounidense que trabaja para la WWE desde 2002.
 

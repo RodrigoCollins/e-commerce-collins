@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCartPlus } from '@fortawesome/free-solid-svg-icons'
 import './ItemCount.css'
+import { Link } from 'react-router-dom';
 
 
 const ItemCount = (props) => {
@@ -28,9 +29,9 @@ const ItemCount = (props) => {
                 <button className="btn decrease" onClick={onSubs}>-</button>
                 <span className="value">{value}</span>
                 <button className="btn increase" onClick={onAdd}>+</button>
-                <button className="btn">
+                <Link to="/cart" className="btn">
                     Add <FontAwesomeIcon icon={faCartPlus} />
-                </button> 
+                </Link> 
             </div>
         </div>
     </main>
