@@ -1,3 +1,8 @@
+Proyecto de E-Commerce para venta de merchandising
+
+La idea surge de hacer algo "divertido" (y la verdad que lo estoy disfrutando mucho jajaja)
+espero que les guste.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
