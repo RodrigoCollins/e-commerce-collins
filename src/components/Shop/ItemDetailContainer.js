@@ -3,9 +3,8 @@ import ItemDetail from './ItemDetail';
 import './ItemDetailContainer.css'
 
 
-
-
 const ItemDetailContainer = () => {
+
 
 
     return ( 

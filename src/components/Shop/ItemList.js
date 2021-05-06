@@ -18,8 +18,8 @@ const ItemList = () => {
             {items.length > 0 && items.map((product) => {
               const {id, img, desc, price, stock} = product;
               return (
-              <Link to={`/itemdetail/${product.id}`}>
-                <Items key={id} img={img} desc={desc} price={price} stock={stock}/>
+              <Link to={`/itemdetail/${product.id}`} key={id} >
+                <Items img={img} desc={desc} price={price} stock={stock}/>
               </Link>
               
               )})}

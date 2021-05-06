@@ -5,9 +5,11 @@ import Items from './Items'
 import ItemCount from './ItemCount'
 
 
-const ItemDetail = () => {
+
+const ItemDetail = (onAdd) => {
     const [item, setItem] = useState('')
     const {id} = useParams();
+    
 
     useEffect(() =>{
     const newItem = products.find((item)=>item.id === parseInt(id));
@@ -18,7 +20,7 @@ const ItemDetail = () => {
     return (
     <div className='detail-container' >
         <Items key={id} img={item.img} desc={item.desc} price={item.price}/>
-        <ItemCount stock={item.stock}/>
+        <ItemCount stock={item.stock} />
         <Link to="/" className="btn">Back to Shop</Link>
     </div>
     )

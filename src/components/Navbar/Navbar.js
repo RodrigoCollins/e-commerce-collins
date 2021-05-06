@@ -1,16 +1,16 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef, useEffect, useContext } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
 import logo from './logo.png';
 import './Navbar.css'
 import {Link} from 'react-router-dom'
 import CartWidget from "./CartWidget"
-
-
-
-
+import { CartContext } from '../../context/cartcontext';
 
 export const Navbar = () => {
+  const {quantity} = useContext(CartContext)
+ 
+
   const [showLinks, setShowLinks] = useState(false);
   const linksContainerRef = useRef(null);
   const linksRef = useRef(null);
@@ -50,7 +50,7 @@ export const Navbar = () => {
                  <Link to='/faq'>FAQ</Link>
                 </li>
                 <li>
-                 <Link to='/cart'><CartWidget/></Link>
+                 <Link to='/cart'><CartWidget/><p>{quantity}</p></Link>
                 </li>
 
               
