@@ -1,9 +1,10 @@
-import React from 'react'
+import React,{useContext} from 'react'
 import { Link } from 'react-router-dom'
+import { CartContext } from '../../context/cartcontext'
 import CartItem from './CartItem'
 
 const Cart = (props) => {
- 
+const {clearCart} = useContext(CartContext)
 
 
   return (
@@ -26,7 +27,7 @@ const Cart = (props) => {
             total <span></span>
           </h4>
         </div>
-        <button className='btn clear-btn'>
+        <button className='btn clear-btn' onClick={clearCart}>
           clear cart
         </button>
       </footer>

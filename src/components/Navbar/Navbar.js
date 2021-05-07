@@ -50,7 +50,7 @@ export const Navbar = () => {
                  <Link to='/faq'>FAQ</Link>
                 </li>
                 <li>
-                 <Link to='/cart'><CartWidget/><p>{quantity}</p></Link>
+                 <Link to='/cart'><CartWidget/><div className='quantity'>{quantity}</div></Link>
                 </li>
 
               

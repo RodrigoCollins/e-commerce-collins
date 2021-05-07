@@ -13,6 +13,10 @@ export const CartProvider = ({children}) => {
         const newCart = cart.filter((item => item.id !== itemId))
         setCart(newCart)
     }
+    const clearCart = () =>{
+        setCart('')
+        setQuantity(0)
+    }
     useEffect(
         () => {
             setQuantity(cart.length)
@@ -20,7 +24,7 @@ export const CartProvider = ({children}) => {
     )
 
     return(
-        <CartContext.Provider value={{cart, addToCart, removeFromCart, quantity}}>
+        <CartContext.Provider value={{cart, addToCart, removeFromCart, clearCart, quantity}}>
             {children}
         </CartContext.Provider>
     )

@@ -164,7 +164,7 @@ nav.active {
   font-size: 1rem;
   text-transform: capitalize;
   letter-spacing: var(--spacing);
-  display: block;
+  display: flex;
   padding: 1.5rem 0.5rem;
   transition: var(--transition);
 }
@@ -183,6 +183,13 @@ nav.active {
 }
 .show-container {
   height: 10rem;
+}
+.quantity {
+  display: flex;
+  float: right;
+  border-radius: 100px;
+  height: 25px;
+  width: 25px;
 }
 @media screen and (min-width: 800px) {
   .nav-center {
@@ -212,16 +219,5 @@ nav.active {
   .links a:hover {
     padding: 0;
     background: transparent;
-  }
-  .social-icons {
-    display: flex;
-  }
-  .social-icons a {
-    margin: 0 0.5rem;
-    color: var(--clr-primary-5);
-    transition: var(--transition);
-  }
-  .social-icons a:hover {
-    color: var(--clr-primary-7);
   }
 }
