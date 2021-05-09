@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import {products} from './ItemsData'
-import {Link, useParams} from 'react-router-dom'
-import Items from './Items'
+import {useParams} from 'react-router-dom'
 import ItemCount from './ItemCount'
+import './ItemDetail.css'
 
 
 
-const ItemDetail = (onAdd) => {
+const ItemDetail = () => {
     const [item, setItem] = useState('')
     const {id} = useParams();
     
@@ -19,9 +19,22 @@ const ItemDetail = (onAdd) => {
 
     return (
     <div className='detail-container' >
-        <Items key={id} img={item.img} desc={item.desc} price={item.price}/>
-        <ItemCount stock={item.stock} />
-        <Link to="/" className="btn">Back to Shop</Link>
+        <div className="img-container">
+        <img style={{width:700}}src={item.img} alt={item.desc}/>
+        </div>
+        <div className="desc-container">
+                <article className='item-desc'>
+                    {item.desc}
+                </article>
+                <p className="complete-desc">
+                  {item.complete}
+                </p>
+                <ItemCount stock={item.stock} />
+                <div className='details-header'>Details:</div>
+                <div className="details-text">{item.details}</div>
+               
+                
+        </div>
     </div>
     )
 }

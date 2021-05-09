@@ -5,7 +5,7 @@ import './ItemList.css'
 import {Link} from 'react-router-dom'
 
 const ItemList = () => {
-    const [items, setItems] = useState(products)
+    const [items] = useState(products)
     
 
    
