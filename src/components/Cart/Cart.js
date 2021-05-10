@@ -1,10 +1,11 @@
 import React,{useContext} from 'react'
 import { Link } from 'react-router-dom'
 import { CartContext } from '../../context/cartcontext'
-import CartItem from './CartItem'
 
-const Cart = (props) => {
+
+const Cart = () => {
 const {clearCart} = useContext(CartContext)
+
 
 
   return (
@@ -13,12 +14,7 @@ const {clearCart} = useContext(CartContext)
       <header>
         <h2>your bag</h2>
       </header>
-     
-      <div>
-        
-      <CartItem img={props.img} desc={props.desc} />
-       
-      </div>
+
       
       <footer>
         <hr />

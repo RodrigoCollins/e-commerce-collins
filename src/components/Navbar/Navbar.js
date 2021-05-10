@@ -9,8 +9,6 @@ import { CartContext } from '../../context/cartcontext';
 
 export const Navbar = () => {
   const {quantity} = useContext(CartContext)
- 
-
   const [showLinks, setShowLinks] = useState(false);
   const linksContainerRef = useRef(null);
   const linksRef = useRef(null);

@@ -1,15 +1,17 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import {products} from './ItemsData'
 import {useParams} from 'react-router-dom'
 import ItemCount from './ItemCount'
 import './ItemDetail.css'
+import { CartContext } from '../../context/cartcontext'
 
 
 
-const ItemDetail = () => {
+
+const ItemDetail = (product) => {
     const [item, setItem] = useState('')
     const {id} = useParams();
-    
+    const {addToCart} = useContext(CartContext)
 
     useEffect(() =>{
     const newItem = products.find((item)=>item.id === parseInt(id));
@@ -29,7 +31,7 @@ const ItemDetail = () => {
                 <p className="complete-desc">
                   {item.complete}
                 </p>
-                <ItemCount stock={item.stock} />
+                <ItemCount stock={item.stock} onAdd={() => addToCart(product)} />
                 <div className='details-header'>Details:</div>
                 <div className="details-text">{item.details}</div>
                

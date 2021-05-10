@@ -9,6 +9,7 @@ const cart = useContext(CartContext)
     <article className='cart-item'>
       <img src={cart.img} alt={cart.desc} />
       
+      
     </article>
   )
 }
