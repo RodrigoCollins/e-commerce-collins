@@ -5,7 +5,6 @@ export const ItemListContainer = () => {
 
     return (
         <div>
-            
             <ItemList />
         </div>
     )

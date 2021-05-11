@@ -1,15 +1,26 @@
 import React, {useContext} from 'react'
-import {CartContext} from '../../context/cartcontext'
+import { CartContext } from '../../context/cartcontext'
+import './Cart.css'
 
-const CartItem = () => {
 
-const cart = useContext(CartContext)
+const CartItem = ({ img, desc, price, stock}, item) => {
+    
+    const {removeFromCart} = useContext(CartContext)
   
   return (
     <article className='cart-item'>
-      <img src={cart.img} alt={cart.desc} />
-      
-      
+      <img src={img} alt={desc} />
+      <div>
+        <h4>{desc}</h4>
+        <h4 className='item-price'>${price}</h4>
+        
+        <button className='remove-btn' onClick={removeFromCart}>
+          remove
+        </button>
+      </div>
+      <div>
+        <p className='amount'>{stock}</p> 
+      </div>
     </article>
   )
 }

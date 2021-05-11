@@ -1,17 +1,19 @@
-import React, { useContext, useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import {products} from './ItemsData'
 import {useParams} from 'react-router-dom'
 import ItemCount from './ItemCount'
 import './ItemDetail.css'
-import { CartContext } from '../../context/cartcontext'
 
 
 
 
-const ItemDetail = (product) => {
+
+
+const ItemDetail = () => {
     const [item, setItem] = useState('')
     const {id} = useParams();
-    const {addToCart} = useContext(CartContext)
+   
+    
 
     useEffect(() =>{
     const newItem = products.find((item)=>item.id === parseInt(id));
@@ -31,7 +33,16 @@ const ItemDetail = (product) => {
                 <p className="complete-desc">
                   {item.complete}
                 </p>
-                <ItemCount stock={item.stock} onAdd={() => addToCart(product)} />
+                <ItemCount 
+                 stock={item.stock}
+                 img={item.img} 
+                 desc={item.desc} 
+                 complete={item.complete}
+                 details={item.details}
+                 price={item.price}
+                 category={item.category}
+                 id={item.id}
+                />
                 <div className='details-header'>Details:</div>
                 <div className="details-text">{item.details}</div>
                

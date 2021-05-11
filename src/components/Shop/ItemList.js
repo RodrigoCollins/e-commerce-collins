@@ -15,11 +15,11 @@ const ItemList = () => {
     return (
         <>
             <div className='shoplist'>
-            {items.length > 0 && items.map((product) => {
-              const {id, img, desc, price, stock, quantity} = product;
+            {items.length > 0 && items.map((item) => {
+              const {id, img, desc, price, stock} = item;
               return (
-              <Link to={`/itemdetail/${product.id}`} key={id} >
-                <Items img={img} desc={desc} price={price} stock={stock} quantity={quantity}/>
+              <Link to={`/itemdetail/${item.id}`} key={id} >
+                <Items img={img} desc={desc} price={price} stock={stock}/>
               </Link>
               
               )})}

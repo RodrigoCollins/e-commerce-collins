@@ -8,7 +8,7 @@ import CartWidget from "./CartWidget"
 import { CartContext } from '../../context/cartcontext';
 
 export const Navbar = () => {
-  const {quantity} = useContext(CartContext)
+  const {itemCount} = useContext(CartContext)
   const [showLinks, setShowLinks] = useState(false);
   const linksContainerRef = useRef(null);
   const linksRef = useRef(null);
@@ -48,7 +48,7 @@ export const Navbar = () => {
                  <Link to='/faq'>FAQ</Link>
                 </li>
                 <li>
-                 <Link to='/cart'><CartWidget/><div className='quantity'>{quantity}</div></Link>
+                 <Link to='/cart'><CartWidget/><div className='quantity'>{itemCount()}</div></Link>
                 </li>
 
               

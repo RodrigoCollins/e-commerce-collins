@@ -9,7 +9,7 @@ export const Items = (props) => {
        <div className='item-info'>
        <div>
        <p className='item-text'>{props.desc}{props.stock}</p>
-       <h4 className="price">{props.price}</h4>
+       <h4 className="price">${props.price}</h4>
 
        </div>
        </div>

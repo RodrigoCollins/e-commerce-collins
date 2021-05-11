@@ -1,4 +1,3 @@
-import './App.css'
 import ItemList from './components/Shop/ItemList'
 import {Navbar} from './components/Navbar/Navbar'
 import {Banner} from './components/Banner/Banner'
@@ -6,8 +5,9 @@ import {About} from './About'
 import {Faq} from './Faq'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import ItemDetailContainer from './components/Shop/ItemDetailContainer'
-import Cart from './components/Cart/Cart'
+import CartContainer from './components/Cart/CartContainer'
 import { CartProvider } from './context/cartcontext'
+
 
 function App() {
   
@@ -30,7 +30,7 @@ function App() {
                 </Route>
                 <Route path="/itemdetail/:id" children={<ItemDetailContainer/>}/>
                 <Route  path="/cart">
-                  <Cart/>
+                  <CartContainer/>
                 </Route> 
             </Switch> 
     </Router>
