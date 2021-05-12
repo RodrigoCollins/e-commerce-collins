@@ -3,7 +3,7 @@ import { CartContext } from '../../context/cartcontext'
 import './Cart.css'
 
 
-const CartItem = ({ img, desc, price, stock}, item) => {
+const CartItem = ({ img, desc, price, stock}) => {
     
     const {removeFromCart} = useContext(CartContext)
   
