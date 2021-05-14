@@ -38,10 +38,10 @@ const {addToCart} = useContext(CartContext)
                 <span className="value">{value}</span>
                 <button className="btn increase" onClick={plus}>+</button>
                 <Link to="/cart" >
-                  <button onClick={() => addToCart(item, value)} className="btn-add">Add <FontAwesomeIcon icon={faCartPlus} /></button>
+                  <button onClick={() => addToCart(item, value)} className="btn btn-add">Add <FontAwesomeIcon icon={faCartPlus} /></button>
                     
                 </Link> 
-                <Link className="btn-back" to="/">Back to Shop</Link>
+                <Link className="btn btn-back" to="/">Back to Shop</Link>
             </div>
         </div>
     </main>

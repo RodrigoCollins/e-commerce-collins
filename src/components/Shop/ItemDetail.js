@@ -30,9 +30,11 @@ const ItemDetail = () => {
                 <article className='item-desc'>
                     {item.desc}
                 </article>
+                <div className="detail-price">${item.price}</div>
                 <p className="complete-desc">
-                  {item.complete}
+                {item.complete}
                 </p>
+                
                 <ItemCount 
                  stock={item.stock}
                  img={item.img} 
