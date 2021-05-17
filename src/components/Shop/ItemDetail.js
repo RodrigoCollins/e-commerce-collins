@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react'
-import {products} from './ItemsData'
+import {items} from './ItemList'
 import {useParams} from 'react-router-dom'
 import ItemCount from './ItemCount'
 import './ItemDetail.css'
+import {getFirestore} from '../../firebase'
 
 
 
@@ -12,12 +13,15 @@ import './ItemDetail.css'
 const ItemDetail = () => {
     const [item, setItem] = useState('')
     const {id} = useParams();
-   
-    
 
     useEffect(() =>{
-    const newItem = products.find((item)=>item.id === parseInt(id));
-    setItem(newItem)
+    const db = getFirestore()
+    const items = db.collection("items")
+    const newItem = items.doc(id)
+    newItem.get().then((doc) =>{
+    const data = {id:doc.id, ...doc.data()}
+    setItem(data)
+    })
     },[id])
     console.log(item)
 
