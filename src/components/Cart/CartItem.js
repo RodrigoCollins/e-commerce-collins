@@ -3,7 +3,7 @@ import { CartContext } from '../../context/cartcontext'
 import './Cart.css'
 
 
-const CartItem = ({ img, desc, price, stock}) => {
+const CartItem = ({ img, desc, price, quantity}) => {
     
     const {removeFromCart} = useContext(CartContext)
   
@@ -19,7 +19,7 @@ const CartItem = ({ img, desc, price, stock}) => {
         </button>
       </div>
       <div>
-        <p className='amount'>{stock}</p> 
+        <p className='amount'>{quantity}</p> 
       </div>
     </article>
   )

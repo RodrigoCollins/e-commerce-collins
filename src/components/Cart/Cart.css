@@ -145,3 +145,16 @@ hr {
   color: var(--clr-red-dark);
   border-color: var(--clr-red-light);
 }
+.ok-btn {
+  background: transparent;
+  padding: 0.5rem 1rem;
+  color: var(--clr-green-dark);
+  border: 1px solid var(--clr-green-dark);
+  margin-top: 2.25rem;
+  border-radius: var(--radius);
+}
+.ok-btn:hover {
+  background: var(--clr-green-light);
+  color: var(--clr-green-dark);
+  border-color: var(--clr-green-light);
+}

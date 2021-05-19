@@ -7,6 +7,7 @@ import {Link} from 'react-router-dom'
 import CartWidget from "./CartWidget"
 import { CartContext } from '../../context/cartcontext';
 
+
 export const Navbar = () => {
   const {itemCount} = useContext(CartContext)
   const [showLinks, setShowLinks] = useState(false);
