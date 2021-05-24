@@ -3,6 +3,27 @@ Proyecto de E-Commerce para venta de merchandising
 La idea surge de hacer algo "divertido" (y la verdad que lo estoy disfrutando mucho jajaja)
 espero que les guste.
 
+const isInStock = (stock,quantity) => {
+return stock >= quantity
+}
+
+const handleFinish = () => {
+const db = getFirestore()
+const batch = db.batch()
+
+     cart.forEach((item) => {
+       const itemRef = db.collection('items').doc(item)
+       if(isInStock(item.stock, item.quantity)){
+         batch.update(itemRef, {stock : item.stock - item.quantity})
+       }else{
+        alert(`${item.desc} not in stock anymore`)
+       }
+    })
+
+     batch.commit()
+
+}
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

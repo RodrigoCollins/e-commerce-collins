@@ -9,21 +9,20 @@ import {CartContext} from '../../context/cartcontext'
 const ItemCount = (item) => {
 
 const [value, setValue] = useState(1)
-const [stock, setStock] = useState(item.stock)
 const {addToCart} = useContext(CartContext)
 
 
 
    const plus = () => {
-   if(value < stock || value < item.stock){
+   if(value < item.stock){
     setValue(value + 1)
-    setStock(stock-1)
+    
    }
   }
   const less = () =>{
-    if(value > stock  || value > 1){
+    if(value > 1){
     setValue(value - 1)
-    setStock(stock + 1)
+    
     }
   }
 
