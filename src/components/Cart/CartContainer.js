@@ -65,7 +65,9 @@ const CartContainer = () => {
         date : firebase.firestore.Timestamp.fromDate(new Date()),
         total : getTotal(),
       }
-    ).then(({id}) => {setOrderId(id)})
+    ).then(({id}) => {
+      setOrderId(id)
+    })
 
     
   alert(`Thanks ${user} your order id is:${orderId}`)

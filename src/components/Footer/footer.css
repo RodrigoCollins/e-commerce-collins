@@ -30,8 +30,6 @@
   --clr-green-dark: hsl(125, 67%, 44%);
   --clr-green-light: hsl(125, 71%, 66%);
   --clr-black: #222;
-  --ff-primary: "Roboto", sans-serif;
-  --ff-secondary: "Open Sans", sans-serif;
   --transition: all 0.3s linear;
   --spacing: 0.1rem;
   --radius: 0.25rem;
@@ -41,46 +39,27 @@
   --fixed-width: 620px;
 }
 
-*,
-::after,
-::before {
-  margin: 0;
-  padding: 0;
-}
-
-.container {
+.main-footer {
+  border-top: 1px solid var(--clr-grey-4);
+  color: var(--clr-grey-4);
+  background-color: var(--clr-primary-10);
+  padding-top: 3em;
+  position: relative;
+  bottom: 0;
+  width: 100%;
   text-align: center;
 }
-.value {
-  font-size: 1rem;
-  font-weight: bold;
-  padding: 2rem;
+.container {
+  display: flex;
 }
-.btn {
-  text-transform: capitalize;
-  background: transparent;
-  color: var(--clr-black);
-  padding: 0.375rem 0.75rem;
-  letter-spacing: var(--spacing);
-  transition: var(--transition);
-  font-size: 1.25rem;
-  border: 2px solid var(--clr-black);
-  cursor: pointer;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
-  border-radius: var(--radius);
-  margin: 0.5rem;
+.col2 {
+  float: left;
 }
-.btn-add {
-  text-transform: capitalize;
-  background: transparent !important;
-  padding: 0.5rem 1rem !important;
-  color: var(--clr-red-dark) !important;
-  border: 1px solid var(--clr-red-dark) !important;
-  margin-top: 2.25rem !important;
-  border-radius: var(--radius);
+li {
+  display: inline-block;
+  padding-left: 25px;
 }
-.btn-add:hover {
-  background: var(--clr-red-light) !important;
-  color: var(--clr-red-dark) !important;
-  border-color: var(--clr-red-light) !important;
+h4 {
+  font-size: 1.5rem;
+  text-transform: uppercase;
 }
