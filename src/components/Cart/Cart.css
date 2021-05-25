@@ -56,6 +56,9 @@
 Cart Item
 ===============
 */
+.cart {
+  text-align: center;
+}
 .cart-item {
   display: flex;
   align-items: center;
