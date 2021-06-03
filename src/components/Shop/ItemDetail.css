@@ -2,6 +2,10 @@
   display: flex;
   padding-left: 200px;
   width: 80%;
+  align-items: center;
+}
+.desc-container {
+  justify-content: center;
 }
 .item-desc {
   padding: 15px;
@@ -50,4 +54,7 @@
 .detail-price {
   font-size: 2rem;
   padding-left: 500px;
+}
+.itemcount {
+  align-items: center;
 }

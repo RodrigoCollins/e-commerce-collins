@@ -36,8 +36,9 @@ const faqs = [
     }
   ]
     return (
-    <div>
-    <section className="questions">
+    <div className="faqs-cont">
+        <img src='https://www.nicepng.com/png/detail/56-565888_john-cena-logo-john-cena-new-logos.png' alt='cenationimg'/>
+    <section className="faqs" >
         <div className="title">
             <h2>frequently asked questions</h2>
 

@@ -38,7 +38,7 @@ export const ItemList = () => {
             {items.map((item) => {
               const {id, img, desc, price, stock} = item;
               return (
-              <Link to={`/itemdetail/${item.id}`} key={id} >
+              <Link to={`/itemdetail/${item.id}`} key={id} className="links">
                 <Items img={img} desc={desc} price={price} stock={stock}/>
               </Link>
               

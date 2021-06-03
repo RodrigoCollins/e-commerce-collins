@@ -9,6 +9,7 @@ import { CartContext } from '../../context/cartcontext';
 
 
 export const Navbar = () => {
+  const {cart} = useContext(CartContext)
   const {itemCount} = useContext(CartContext)
   const [showLinks, setShowLinks] = useState(false);
   const linksContainerRef = useRef(null);
@@ -49,7 +50,7 @@ export const Navbar = () => {
                  <Link to='/faq'>FAQ</Link>
                 </li>
                 <li>
-                 <Link to='/cart'><CartWidget/><div className='quantity'>{itemCount()}</div></Link>
+                 <Link to='/cart'><CartWidget/><div className='quantity'>{cart.length !== 0 && itemCount()}</div></Link>
                 </li>
 
               

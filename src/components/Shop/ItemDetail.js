@@ -48,6 +48,7 @@ const ItemDetail = () => {
                  category={item.category}
                  id={item.id}
                 />
+                
                 <div className='details-header'>Details:</div>
                 <div className="details-text">{item.details}</div>
                

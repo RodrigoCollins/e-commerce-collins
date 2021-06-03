@@ -23,19 +23,19 @@ const CartContainer = () => {
   const renderDivs = [
     {
       ID:1,
-      label: 'Nombre',
+      label: 'Name:',
       name: 'user',
       value: user
     },
     {
       ID:2,
-      label: 'Phone',
+      label: 'Phone:',
       name: 'phone',
       value: phone
     },
     {
       ID:3,
-      label: 'Email',
+      label: 'Email:',
       name: 'email',
       value: email
     }
@@ -67,12 +67,13 @@ const CartContainer = () => {
       }
     ).then(({id}) => {
       setOrderId(id)
+      
     })
 
-    
+  console.log(orderId)  
   alert(`Thanks ${user} your order id is:${orderId}`)
 
-  
+ 
   }
   
     
@@ -89,8 +90,8 @@ const CartContainer = () => {
   }
 
   return (
-    <div>
-      <h2>your cart</h2>
+    <div className="cart-container">
+      <h2 className="title-cart">your cart:</h2>
     <div>
     {cart.map(item => (
        <CartItem 
@@ -110,13 +111,14 @@ const CartContainer = () => {
         </div>
     <button type='button' onClick={clearCart} className='btn clear-btn'>Clear Cart</button> 
     <Link className="btn" to="/">Continue Shopping</Link>
-    
+    <hr/>
+    <h3>Complete Personal Info</h3>
           <form
         onSubmit={newOrder}
       >
         {renderDivs.map(div => (
           <div className='input-container' key={div.ID}>
-            <label className="mr-4">{div.label}</label>
+            <label >{div.label}</label>
             <input type="text" name={div.name} value={div.value} onChange={handleChange} onBlur={handleBlur}  />
           </div>
         ))}
