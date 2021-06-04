@@ -11,6 +11,7 @@ import 'firebase/firestore'
 const CartContainer = () => {
   const {cart, clearCart, getTotal} = useContext(CartContext);
   const [orderId, setOrderId] = useState('');
+  const [show, setShow] = useState(false)
   const [inputValues, setInputValues] = useState({
     user:'',
     phone:'',
@@ -22,19 +23,19 @@ const CartContainer = () => {
 
   const renderDivs = [
     {
-      ID:1,
+      id:1,
       label: 'Name:',
       name: 'user',
       value: user
     },
     {
-      ID:2,
+      id:2,
       label: 'Phone:',
       name: 'phone',
       value: phone
     },
     {
-      ID:3,
+      id:3,
       label: 'Email:',
       name: 'email',
       value: email
@@ -70,8 +71,7 @@ const CartContainer = () => {
       
     })
 
-  console.log(orderId)  
-  alert(`Thanks ${user} your order id is:${orderId}`)
+   setShow(true)
 
  
   }
@@ -117,7 +117,7 @@ const CartContainer = () => {
         onSubmit={newOrder}
       >
         {renderDivs.map(div => (
-          <div className='input-container' key={div.ID}>
+          <div className='input-container' key={div.id}>
             <label >{div.label}</label>
             <input type="text" name={div.name} value={div.value} onChange={handleChange} onBlur={handleBlur}  />
           </div>
@@ -129,6 +129,7 @@ const CartContainer = () => {
             Checkout
           </button>
       </form>
+      {show && <h4>thanks {user} you order id is {orderId}</h4>}
       {error && <div className="div-error">HUBO UN ERROR</div>}
     </div>
   );
